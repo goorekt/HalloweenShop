@@ -1,7 +1,8 @@
 using classes;
 
 //Vi fortæller systemet hvor filen med produkterne ligger
-string path = @"products.txt";
+string path =Path.GetFullPath("products.txt");
+Console.WriteLine();
 Products warehouse = new Products();
 
 Products shoppingCart = new Products();
