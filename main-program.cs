@@ -127,7 +127,7 @@ while (!isProgramExiting)
                 {
                     int amountInput = input<int>("How many do you want?");
                     Product chosenProduct = warehouse.findProductById(productIdChosen);
-                    chosenProduct.ShoppingCartStatus();
+                    
                     shoppingCart.addProductToShoppingCart(chosenProduct,amountInput);
                 }
                 catch (System.Exception)
