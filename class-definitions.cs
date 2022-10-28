@@ -30,7 +30,7 @@
             Console.WriteLine($"[{this.id}] {this.name}");
             System.Console.WriteLine(this.description);
             System.Console.WriteLine($"price: {this.price} kr.");
-            System.Console.WriteLine($"Only {this.stockStatus} left in warehouse!!!");
+            System.Console.WriteLine($"{this.stockStatus} available in warehouse.");
         }
 
         public void ShoppingCartStatus(){
@@ -84,7 +84,7 @@
             return(this.totalPrice);
             
         }
-        
+
         //tjekker om ønsket antal er ledig på lageret
         public bool available(List<Product> products){
             foreach (var product in products)
