@@ -181,16 +181,11 @@ while (!isProgramExiting)
                         if(item.quantity>item.stockStatus){
                             Console.WriteLine($"You have bought too many {item.name}s. This item will be removed from shopping cart and you have to try again.");
                             itemToRemove=item;
-                            
-                        
                         }
                     }
                     shoppingCart.list.Remove(itemToRemove);
-                    
-                    
-                }
-                
-                
+
+                }   
             }
             else
             {
