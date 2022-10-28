@@ -163,9 +163,11 @@ while (!isProgramExiting)
             //Svarer til use case 3: Opdater lager efter bestilling
             if (userInput == "y")
             {
+                //tjekker om der er nok varer på lageret
                 if(warehouse.available(shoppingCart.list))
                 {
-                    //Her laver vi et metodekald til metoden reduceStockStatus
+                
+                //Her laver vi et metodekald til metoden reduceStockStatus
 
                 warehouse.reduceStockStatus(shoppingCart.list);
                 //Her fjerner vi alle varerne fra indkøbskurven
@@ -173,9 +175,11 @@ while (!isProgramExiting)
 
                 Console.WriteLine("Order succesfull");
                 }
+                //hvis der ikke er nok ledige
                 else
                 {
                     Product itemToRemove=null;
+                    //finder det produkt der er for mange af
                     foreach (var item in shoppingCart.list)
                     {
                         if(item.quantity>item.stockStatus){
@@ -183,6 +187,8 @@ while (!isProgramExiting)
                             itemToRemove=item;
                         }
                     }
+
+                    //produktet, der er formange af, bliver fjernet
                     shoppingCart.list.Remove(itemToRemove);
 
                 }   
